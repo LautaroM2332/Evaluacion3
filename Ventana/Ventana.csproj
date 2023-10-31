@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55C9E041-57A9-4C07-86A2-6BC534D059A3}</ProjectGuid>
+    <ProjectGuid>{44DD2AD3-6E3E-4CA9-95A4-1352BEE19EE3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio3</RootNamespace>
-    <AssemblyName>Ejercicio3</AssemblyName>
+    <RootNamespace>Ventana</RootNamespace>
+    <AssemblyName>Ventana</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Ventanas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Ventanas.Designer.cs">
+      <DependentUpon>Ventanas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas.resx">
+      <DependentUpon>Ventanas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,20 +81,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimarket.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-simple-gradient-universal-background-material-image_213211.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BackEnd\BackEnd.csproj">
-      <Project>{3bc35c81-1487-442c-9d44-9a93971948ab}</Project>
-      <Name>BackEnd</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ventana\Ventana.csproj">
-      <Project>{44dd2ad3-6e3e-4ca9-95a4-1352bee19ee3}</Project>
-      <Name>Ventana</Name>
-    </ProjectReference>
+    <None Include="Resources\photo-1615715874994-bb83092ef331.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackEnd;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ventana;
 
 namespace Ejercicio3
 {
     public partial class Form1 : Form
     {
-        int precio;
-
+        Calculo calcular = new Calculo();
+        Ventanas ven = new Ventanas();
         public Form1()
         {
             InitializeComponent();
@@ -38,35 +40,49 @@ namespace Ejercicio3
                 else if(ctrl is RadioButton)
                 {
                     (((RadioButton)ctrl).Checked) = false;
-
                 }
+                lblCuotas.Visible = false;
+                lblprecioFinal.Text = "$0";
 
             }
         }
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-
+            
             while (rbtEfectivo.Checked == false && rbtTarjeta.Checked == false)
             {
                 MessageBox.Show("Por Favor, seleccione la forma de pago");
                 return;
-                
             }
 
             if (rbtEfectivo.Checked == true)
             {
-                int descuento;
-                int precio1 = int.Parse(txtPrecio.Text);
-                descuento = precio1 * 15 / 100;
-                precio = precio1 - descuento;
+                calcular.precio = Convert.ToDecimal(txtPrecio.Text);
+
+                lblprecioFinal.Text = calcular.efectivoDes(calcular.descuento, Convert.ToDecimal(calcular.precio)).ToString();
+                lblCuotas.Visible = false;
             }
             else if(rbtTarjeta.Checked == true)
             {
-                int precio1 = int.Parse(txtPrecio.Text);
-                precio = precio1 * 11 / 10;
+                calcular.precio = Convert.ToDecimal(txtPrecio.Text);
+
+                lblprecioFinal.Text = calcular.tarjeta(Convert.ToDecimal(calcular.precio)).ToString();
+
+                if (ven.tresCu)
+                {
+                    int precioF = Convert.ToInt32(calcular.precio);
+                    lblCuotas.Visible = true;
+                    lblCuotas.Text = "/ En 3 Cuotas de $" + (precioF / 3).ToString() + " pesos";
+                }
+                else if (ven.seisCu)
+                {
+                    int precioF = Convert.ToInt32(calcular.precio);
+                    lblCuotas.Visible=true;
+                    lblCuotas.Text ="/ En 6 Cuotas de $" + (precioF / 6).ToString() + " pesos";
+                }
             }
-            lblprecioFinal.Text = precio.ToString();
+           
 
         }
 
@@ -79,8 +95,7 @@ namespace Ejercicio3
         {
             if (rbtTarjeta.Checked == true)
             {
-                Form2 ventana = new Form2();
-                ventana.Visible = true;
+                ven.Visible = true;
             }
         }
 
@@ -123,6 +138,10 @@ namespace Ejercicio3
         private void txtProducto_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void lblCuotas_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -41,6 +41,7 @@
             this.rbtTarjeta = new System.Windows.Forms.RadioButton();
             this.rbtEfectivo = new System.Windows.Forms.RadioButton();
             this.lblprecioFinal = new System.Windows.Forms.Label();
+            this.lblCuotas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -192,12 +193,25 @@
             this.lblprecioFinal.Text = "$0000";
             this.lblprecioFinal.Click += new System.EventHandler(this.label2_Click_1);
             // 
+            // lblCuotas
+            // 
+            this.lblCuotas.AutoSize = true;
+            this.lblCuotas.BackColor = System.Drawing.Color.Transparent;
+            this.lblCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuotas.Location = new System.Drawing.Point(247, 186);
+            this.lblCuotas.Name = "lblCuotas";
+            this.lblCuotas.Size = new System.Drawing.Size(20, 29);
+            this.lblCuotas.TabIndex = 16;
+            this.lblCuotas.Text = "/";
+            this.lblCuotas.Click += new System.EventHandler(this.lblCuotas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ejercicio3.Properties.Resources.pngtree_simple_gradient_universal_background_material_image_213211;
             this.ClientSize = new System.Drawing.Size(636, 260);
+            this.Controls.Add(this.lblCuotas);
             this.Controls.Add(this.lblprecioFinal);
             this.Controls.Add(this.rbtEfectivo);
             this.Controls.Add(this.rbtTarjeta);
@@ -234,6 +248,7 @@
         private System.Windows.Forms.RadioButton rbtTarjeta;
         private System.Windows.Forms.RadioButton rbtEfectivo;
         private System.Windows.Forms.Label lblprecioFinal;
+        private System.Windows.Forms.Label lblCuotas;
     }
 }
 
