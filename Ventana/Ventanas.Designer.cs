@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnListo);
             this.Name = "Ventanas";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Ventanas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

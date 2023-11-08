@@ -40,5 +40,9 @@ namespace Ventana
             seisCu = rbt6Cu.Checked = true;
         }
 
+        private void Ventanas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

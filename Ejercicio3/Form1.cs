@@ -16,11 +16,12 @@ namespace Ejercicio3
 {
     public partial class Form1 : Form
     {
-        Calculo calcular = new Calculo();
         Ventanas ven = new Ventanas();
+        Productos produc { get; set; } = new Productos();
         public Form1()
         {
             InitializeComponent();
+            dg.DataSource = produc.ListaPro;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,53 +50,45 @@ namespace Ejercicio3
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            
             while (rbtEfectivo.Checked == false && rbtTarjeta.Checked == false)
             {
                 MessageBox.Show("Por Favor, seleccione la forma de pago");
                 return;
             }
-
-            if (rbtEfectivo.Checked == true)
+            
+            int suma = 0;
+            if(dg.Rows.Count > 0)
             {
-                calcular.precio = Convert.ToDecimal(txtPrecio.Text);
-
-                lblprecioFinal.Text = calcular.efectivoDes(calcular.descuento, Convert.ToDecimal(calcular.precio)).ToString();
-                lblCuotas.Visible = false;
-            }
-            else if(rbtTarjeta.Checked == true)
-            {
-                calcular.precio = Convert.ToDecimal(txtPrecio.Text);
-
-                lblprecioFinal.Text = calcular.tarjeta(Convert.ToDecimal(calcular.precio)).ToString();
-
-                if (ven.tresCu)
+                foreach(DataGridViewRow Row in dg.Rows)
                 {
-                    int precioF = Convert.ToInt32(calcular.precio);
-                    lblCuotas.Visible = true;
-                    lblCuotas.Text = "/ En 3 Cuotas de $" + (precioF / 3).ToString() + " pesos";
-                }
-                else if (ven.seisCu)
-                {
-                    int precioF = Convert.ToInt32(calcular.precio);
-                    lblCuotas.Visible=true;
-                    lblCuotas.Text ="/ En 6 Cuotas de $" + (precioF / 6).ToString() + " pesos";
+                    suma += Convert.ToInt32(Row.Cells[1].Value);
+                    lblprecioFinal.Text = "$" + Convert.ToString(suma);
                 }
             }
-           
+
+            if (ven.tresCu)
+            {
+                lblprecioFinal.Text = "$" + suma;
+                lblCuotas.Text = "/ En 3 cuotas de $" + (suma / 3);
+            }
+            else if (ven.seisCu)
+            {
+                lblprecioFinal.Text = "$" + suma;
+                lblCuotas.Text = "/ En 6 cuotas de $" + (suma / 6);
+            }
 
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("En efectivo se le realiza un descuento del 15%");
+            MessageBox.Show("En efectivo se le realiza un descuento del 5%", "DE$CUENTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtTarjeta.Checked == true)
             {
-                ven.Visible = true;
+                ven.ShowDialog();
             }
         }
 
@@ -142,6 +135,43 @@ namespace Ejercicio3
 
         private void lblCuotas_Click(object sender, EventArgs e)
         {
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnAgregarCa_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Producto Agregado");
+            Agregar agregar = new Agregar();
+
+            agregar.AgregarPro(produc.ListaPro.Rows.Count+1, txtProducto.Text, txtPrecio.Text);
+            produc.adicionar(agregar);
+            txtCodigo.Text = agregar.codigo.ToString();
+
+            txtProducto.Text = "";
+            txtPrecio.Text = "";
+            txtCodigo.Text = "";
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dg.Rows.Remove(dg.CurrentRow);
         }
     }
 }

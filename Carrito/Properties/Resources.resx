@@ -118,34 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="carritoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carritoo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Verdadera Cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Verdadera Cruz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-simple-gradient-universal-background-material-image_213211" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-simple-gradient-universal-background-material-image_213211.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="photo-1615715874994-bb83092ef331" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo-1615715874994-bb83092ef331.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carritooo0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carritooo0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carritooo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carritooo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimarket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimarket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carrito (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrito (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Verdadera Cruz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Verdadera Cruz1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

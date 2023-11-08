@@ -96,5 +96,29 @@
       <Name>Ventana</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1615715874994-bb83092ef331.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carritoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carritooo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carritooo0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verdadera Cruz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verdadera Cruz1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
